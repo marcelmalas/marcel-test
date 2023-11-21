@@ -1,0 +1,104 @@
+@import "styles/_theme.scss";
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  @media (max-width: $breakpoint-md) {
+    flex-direction: column;
+    align-items: unset;
+    gap: 30px;
+  }
+}
+
+.imageContainer {
+  flex: 1;
+  height: 100%;
+  background-image: url("../../../../assets/images/login-bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: fadeInBottom 1s ease-out;
+
+  @media (max-width: $breakpoint-md) {
+    margin: 10px;
+    border-radius: 10px;
+    flex: 2;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    flex: 2;
+  }
+}
+
+.contentContainer {
+  flex: 1;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $breakpoint-md) {
+    flex: 3;
+    align-items: unset;
+  }
+
+  @media (max-width: $breakpoint-sm) {
+    flex: 4;
+    justify-content: unset;
+    display: inline;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  flex: 0.5;
+  animation: slideInRightLeft 1s ease-out;
+
+  @media (max-width: $breakpoint-lg) {
+    flex: 0.7;
+  }
+
+  @media (max-width: $breakpoint-md) {
+    gap: 20px;
+  }
+}
+
+.form,
+.fieldsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+
+  @media (max-width: $breakpoint-md) {
+    gap: 30px;
+  }
+}
+
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInRightLeft {
+  from {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

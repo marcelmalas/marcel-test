@@ -1,0 +1,24 @@
+.inputLabelContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    input {
+      width: auto;
+    }
+  }
+}
+
+.label {
+  color: #282424;
+  font-weight: 700;
+}
+
+.error {
+  color: #f44336;
+}

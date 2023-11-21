@@ -1,0 +1,26 @@
+.container {
+  height: 100vh;
+  background-image: url("../../../../assets/images/welcome-bg.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcomeText {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 1s forwards;
+  color: #ffffff;
+  font-size: 4rem;
+  font-family: Inter;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
